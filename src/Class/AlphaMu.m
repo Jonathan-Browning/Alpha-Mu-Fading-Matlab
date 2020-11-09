@@ -58,7 +58,7 @@ classdef AlphaMu
             end
             
             % mu must be integer
-            if (strcmp(name,'\mu') || strcmp(name,'\alpha')) && mod(data, 1) ~= 0
+            if strcmp(name,'\mu') && mod(data, 1) ~= 0
                 error(strcat(name,' must be an integer'));
             end
                 
@@ -104,7 +104,7 @@ classdef AlphaMu
         
         function [xdataEnv, ydataEnv] = envelope_Density(obj)
             %envelope_Density Evaluates the envelope PDF
-            R = nthroot(obj.multipathFading,obj.alpha);
+            R = (obj.multipathFading).^(1/obj.alpha);
 
             [f,x] = ecdf(R);
             [ydataEnv, xdataEnv] = ecdfhist(f,x, 0:0.05:max(obj.r));

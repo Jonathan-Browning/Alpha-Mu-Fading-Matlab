@@ -8,7 +8,7 @@ Further details of this model can be found in Yacoub's paper:
 Run main.m to start the GUI if Matlab is already installed.
 Alternatively if Matlab isn't installed, can run the installer from the build folder, which requires an internet connection to download the required files.
 
-The input \alpha accepts integer values in the range 1 to 10.
+The input \alpha accepts values in the range 1 to 10.
 The input \mu accepts integer values in the range 1 to 10.
 The input \hat{r} accepts values in the range 0.5 to 2.5.
 
